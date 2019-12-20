@@ -4,12 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "preinstall": "cd ./addons/add && npm install",
     "start": "node .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:start": "DEV=true node ."
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "sqlite3": "^4.1.1"
-  }
+  "dependencies": {}
 }
