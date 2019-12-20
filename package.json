@@ -2,12 +2,11 @@
   "name": "project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "preinstall": "cd ./addons/add && npm install",
     "start": "node .",
-    "dev:start": "DEV=true node .",
-    "test": "mocha ./tests/index.js"
+    "test": "mocha ./tests/server.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +15,7 @@
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
     "fuzzer": "^0.2.1",
-    "mocha": "^6.2.2"
+    "mocha": "^6.2.2",
+    "sinon": "^7.5.0"
   }
 }
