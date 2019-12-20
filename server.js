@@ -24,10 +24,8 @@ server = server.createServer((req, res) => {
   threadCount = 0;
 
   req.on('data', (chunk) => {
-    try {
-      let threads = JSON.parse(chunk).threads;
-      startThreads(threads);
-    }
+    let threads = JSON.parse(chunk).threads;
+    startThreads(threads);
   });
 
   res.end("OK");

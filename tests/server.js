@@ -1,8 +1,7 @@
-// const describe = require("mocha").describe;
 const mocha = require("mocha");
-let chai = require('chai');
-let chaiHttp = require('chai-http');
-let sinon = require("sinon");
+const chai = require('chai');
+const chaiHttp = require('chai-http');
+const sinon = require("sinon");
 
 let server;
 
@@ -10,7 +9,7 @@ chai.use(chaiHttp);
 sinon.stub(console, "log");
 
 describe('server', () => {
-  beforeEach(function() {
+  beforeEach(() => {
     server = require('../server.js').default;
   });
 
@@ -21,7 +20,7 @@ describe('server', () => {
     });
   });
 
-  context('with params', function() {
+  context('with params', () => {
     it('returns 200', (done) => {
       chai.request(server).post('/').send({ threads: 10 }).end((err, res) => {
         chai.assert(res.statusCode, 200);
@@ -30,7 +29,7 @@ describe('server', () => {
     });
   });
 
-  context("when error thrown", function() {
+  context("when error thrown", () => {
     beforeEach(() => {
       server.createServer = () => {
         throw ParamsError;
