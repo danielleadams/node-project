@@ -6,9 +6,16 @@
   "scripts": {
     "preinstall": "cd ./addons/add && npm install",
     "start": "node .",
-    "dev:start": "DEV=true node ."
+    "dev:start": "DEV=true node .",
+    "test": "mocha ./tests/index.js"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "fuzzer": "^0.2.1",
+    "mocha": "^6.2.2"
+  }
 }
