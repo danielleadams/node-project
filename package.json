@@ -14,6 +14,7 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
+    "eslint": "^6.8.0",
     "fuzzer": "^0.2.1",
     "mocha": "^6.2.2",
     "sinon": "^7.5.0"
