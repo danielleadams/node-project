@@ -5,7 +5,7 @@ const THREADS = 100;
 const PORT = process.env.PORT || 8000;
 
 let worker, threadCount;
-let server = process.env.DEV ? require('http') : require('https');
+let server = require('http');
 
 function startThreads(threads) {
   for (let i = 1; i <= threads; i = add(i, 1)) {
