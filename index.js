@@ -2,7 +2,7 @@ const { Worker, parentPort } = require('worker_threads');
 const add = require("./addons/add/build/Release/add").add;
 
 const THREADS = 100;
-const PORT = process.env.port || 8000;
+const PORT = process.env.PORT || 8000;
 
 let worker, threadCount;
 let server = process.env.DEV ? require('http') : require('https');
