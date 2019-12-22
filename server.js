@@ -13,7 +13,7 @@ function startThreads(threads) {
   for (let i = 1; i <= threads; i = add(i, 1)) {
     worker = new Worker("./tick.js", { workerData: i });
     totalThreads = add(totalThreads, 1);
-    activeThreads = add(totalThreads, 1);
+    activeThreads = add(activeThreads, 1);
 
     worker.on('message', ({ id, date }) => {
       threadCount = add(threadCount, 1);
